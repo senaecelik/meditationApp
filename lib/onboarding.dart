@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:meditasyon_app/sing_page.dart';
+import 'package:meditation_app/pages/login_page.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);
@@ -88,7 +88,7 @@ class OnBoarding extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const SignPage()),
+                      MaterialPageRoute(builder: (context) => const LogIn()),
                     );
                   },
                   child: Text(
