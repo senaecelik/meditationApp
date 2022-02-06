@@ -1,4 +1,4 @@
-name: meditasyon_app
+name: meditation_app
 description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^2.2.0
+  eva_icons_flutter: ^3.0.2
 
 dev_dependencies:
   flutter_test:
@@ -60,10 +61,12 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - assets/Frame.png
-     - assets/Group.png
-     - assets/head.png
-     - assets/download.jpeg
+    - assets/Frame.png
+    - assets/Group.png
+    - assets/headp.png
+    - assets/login.png
+    - assets/welcome.png
+    - assets/logo.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
