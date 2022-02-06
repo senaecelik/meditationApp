@@ -12,8 +12,8 @@ This project is a starting point for a Flutter application.
 <table>
   <tr>
     <td>On Boarding Page</td>
-     <td>Sign Up Page</td>
      <td>Log In Page</td>
+     <td>Sign Up Page</td>
      <td>Welcome Page</td>
   </tr>
   <tr>
