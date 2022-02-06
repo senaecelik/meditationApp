@@ -17,9 +17,10 @@ samples, guidance on mobile development, and a full API reference.
 
 <table>
   <tr>
-    <td>First Screen Page</td>
-     <td>Holiday Mention</td>
-     <td>Present day in purple and selected day in pink</td>
+    <td>On Boarding Page</td>
+     <td>Sign Up Page</td>
+     <td>Log In Page</td>
+     <td>Welcome Page</td>
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/48855691/152691117-b2e43b2e-0fed-4e5e-b4bc-7351ed25cb88.png" width="380" height="450"></td>
