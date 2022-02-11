@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:meditation_app/helper/style/text_style.dart';
 import 'package:meditation_app/pages/login_page.dart';
 import 'package:meditation_app/pages/signin_page.dart';
-import 'package:meditation_app/widget/purpleContainer.dart';
-import 'package:meditation_app/widget/textStyle.dart';
+import 'package:meditation_app/helper/constant/color_constant.dart';
+import 'package:meditation_app/widget/button_container.dart';
+import 'package:meditation_app/widget/head_widget.dart';
+import 'package:meditation_app/widget/silentmoon.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);
@@ -25,23 +28,7 @@ class OnBoarding extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Silent",
-                        style: StringStyle.instance.headText,
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Image.asset("assets/headp.png"),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text("Moon", style: StringStyle.instance.headText),
-                    ],
-                  ),
+                  const SilentMoon(),
                   const SizedBox(
                     height: 80,
                   ),
@@ -49,20 +36,22 @@ class OnBoarding extends StatelessWidget {
                 ],
               ),
             ),
-            Text(
-              "We are what we do",
-              style: StringStyle.instance.hText,
-            ),
+            HeadWidget(text: "We are what we do"),
             const SizedBox(
               height: 15,
             ),
             Text(
                 "Thousand of people are usign silent moon\nfor smalls meditation ",
-                style: StringStyle.instance.subText),
+                style: StringStyle.subText),
             const SizedBox(
               height: 62,
             ),
-            PurpleContainer(text: "Sign In", page: const SignIn()),
+            ButtonContainer(
+              text: "Sign In",
+              page: const SignIn(),
+              color: ColorConstant.kPurple,
+              textColor: Colors.white,
+            ),
             const SizedBox(
               height: 10,
             ),
@@ -71,13 +60,13 @@ class OnBoarding extends StatelessWidget {
               children: [
                 Text(
                   "ALREADY HAVE AN ACCOUNT?",
-                  style: StringStyle.instance.sub1Text,
+                  style: StringStyle.sub1Text,
                 ),
                 TextButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LogIn()),
+                      MaterialPageRoute(builder: (context) => const LogIn()),
                     );
                   },
                   child: Text(
