@@ -28,6 +28,20 @@ This project is a starting point for a Flutter application.
 
   
  </table>
+ 
+ <table>
+  <tr>
+  
+     <td>Home Page</td>
+     <td>Reminders Page</td>
+  </tr>
+  <tr>
+
+    <td><img src="https://user-images.githubusercontent.com/48855691/153652529-e2b65335-3dae-4fed-9abf-2cecaac05899.jpg" width="320" height="400"></td>
+    <td><img src="https://user-images.githubusercontent.com/48855691/153652595-5820cb90-c582-4d45-966f-eb0699213e9b.jpg" width="320" height="400"></td>
+
+  
+ </table>
 
 
 
