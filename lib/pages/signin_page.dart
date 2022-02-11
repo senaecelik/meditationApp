@@ -2,9 +2,12 @@ import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meditation_app/pages/welcome_page.dart';
-import 'package:meditation_app/widget/facebookContainer.dart';
-import 'package:meditation_app/widget/googleContainer.dart';
-import 'package:meditation_app/widget/purpleContainer.dart';
+import 'package:meditation_app/widget/back_arrow.dart';
+import 'package:meditation_app/helper/constant/color_constant.dart';
+import 'package:meditation_app/widget/facebook_container.dart';
+import 'package:meditation_app/widget/google_container.dart';
+import 'package:meditation_app/widget/button_container.dart';
+import 'package:meditation_app/widget/head_widget.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -36,55 +39,30 @@ class _SignInState extends State<SignIn> {
             Container(
               height: MediaQuery.of(context).size.height / 2,
               width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage("assets/login.png"), fit: BoxFit.fill),
               ),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 50,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 55,
-                          width: 55,
-                          decoration: BoxDecoration(
-                            border:
-                                Border.all(color: Colors.grey.withOpacity(0.5)),
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                          ),
-                          child: IconButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              icon: Icon(Icons.arrow_back)),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
+                  const BackArrow(),
+                  const SizedBox(
                     height: 29,
                   ),
-                  Text(
-                    "Create your account",
-                    style: GoogleFonts.roboto(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 28,
-                        color: Color.fromRGBO(63, 65, 78, 1)),
+                  HeadWidget(
+                    text: "Create your account",
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 33,
                   ),
-                  FacebookContainer(),
-                  SizedBox(
+                  const FacebookContainer(),
+                  const SizedBox(
                     height: 20,
                   ),
-                  GoogleContainer(),
+                  const GoogleContainer(),
                 ],
               ),
             ),
@@ -94,9 +72,9 @@ class _SignInState extends State<SignIn> {
                   fontWeight: FontWeight.w700,
                   fontSize: 14,
                   letterSpacing: 2,
-                  color: Color.fromRGBO(161, 164, 178, 1)),
+                  color: ColorConstant.kGrey),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Container(
@@ -104,12 +82,12 @@ class _SignInState extends State<SignIn> {
               height: 63,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Color.fromRGBO(242, 243, 247, 1)),
+                  color: ColorConstant.kLightGrey),
               child: Padding(
                 padding: const EdgeInsets.only(left: 20.0, top: 5),
                 child: TextFormField(
                   decoration: InputDecoration(
-                      suffixIcon: Icon(Icons.done_rounded, color: Colors.green),
+                      suffixIcon: const Icon(Icons.done_rounded, color: Colors.green),
                       hintText: "Username",
                       border: InputBorder.none,
                       hintStyle: GoogleFonts.roboto(
@@ -119,7 +97,7 @@ class _SignInState extends State<SignIn> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Container(
@@ -127,12 +105,12 @@ class _SignInState extends State<SignIn> {
               height: 63,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Color.fromRGBO(242, 243, 247, 1)),
+                  color: ColorConstant.kLightGrey),
               child: Padding(
                 padding: const EdgeInsets.only(left: 20.0, top: 5),
                 child: TextFormField(
                   decoration: InputDecoration(
-                      suffixIcon: Icon(Icons.done_rounded, color: Colors.green),
+                      suffixIcon: const Icon(Icons.done_rounded, color: Colors.green),
                       hintText: "Email address",
                       border: InputBorder.none,
                       hintStyle: GoogleFonts.roboto(
@@ -142,7 +120,7 @@ class _SignInState extends State<SignIn> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 25,
             ),
             Container(
@@ -150,13 +128,13 @@ class _SignInState extends State<SignIn> {
               height: 63,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: Color.fromRGBO(242, 243, 247, 1)),
+                  color: ColorConstant.kLightGrey),
               child: Padding(
                 padding: const EdgeInsets.only(left: 20.0, top: 5),
                 child: TextFormField(
                   obscureText: true,
                   decoration: InputDecoration(
-                      suffixIcon: Icon(EvaIcons.eyeOff2, color: Colors.black),
+                      suffixIcon: const Icon(EvaIcons.eyeOff2, color: Colors.black),
                       hintText: "Password",
                       border: InputBorder.none,
                       hintStyle: GoogleFonts.roboto(
@@ -166,7 +144,7 @@ class _SignInState extends State<SignIn> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -179,7 +157,7 @@ class _SignInState extends State<SignIn> {
                     style: GoogleFonts.roboto(
                         fontWeight: FontWeight.w400,
                         fontSize: 16,
-                        color: Color.fromRGBO(161, 164, 178, 1)),
+                        color: ColorConstant.kGrey),
                   ),
                   Checkbox(
                     checkColor: Colors.white,
@@ -194,11 +172,16 @@ class _SignInState extends State<SignIn> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 32,
             ),
-            PurpleContainer(text: "GET STARTED", page: WelcomePage()),
-            SizedBox(
+            ButtonContainer(
+              text: "GET STARTED",
+              page: const WelcomePage(),
+              color: ColorConstant.kPurple,
+              textColor: Colors.white,
+            ),
+            const SizedBox(
               height: 32,
             ),
           ],
