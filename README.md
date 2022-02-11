@@ -15,8 +15,7 @@ This project is a starting point for a Flutter application.
      <td>Log In Page</td>
      <td>Sign Up Page</td>
      <td>Welcome Page</td>
-     <td>Home Page</td>
-     <td>Reminders Page</td>
+    
   </tr>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/48855691/152691117-b2e43b2e-0fed-4e5e-b4bc-7351ed25cb88.png" width="320" height="400"></td>
